@@ -21,11 +21,11 @@
     </button>
     <nav id="navbar" data-visible="false" tabindex="0">
       <ul class="nav-menu" role="menubar" aria-haspopup="true">
-        <li role="menuitem " aria-label="Home" class="nav-item active">
+        <!-- <li role="menuitem " aria-label="Home" class="nav-item active">
           <a class="nav-link" href="#">Home</a>
-        </li>
+        </li> -->
         <li class="nav-item" role="menuitem" aria-label="Portfolio">
-          <a class="nav-link" href="#">Portfolio</a>
+          <a class="nav-link" href="#portfolio">Portfolio</a>
         </li>
         <li class="nav-item" role="menuitem" aria-label="About">
           <a class="nav-link" href="#">About</a>
@@ -38,7 +38,10 @@
         </li>
       </ul>
     </nav>
-    <section class="projects-section" id="work">
+    <div class="top-container">
+      <h1 class="hideHello">Hello!</h1>
+    </div>
+    <section class="projects-section" id="portfolio">
       <h1 class="proj-title">Projects</h1>
       <div class="proj-grid">
         <!-- === Angular Movie App === -->
@@ -48,7 +51,7 @@
             alt="Angular Movie App"
           />
           <div class="image__overlay">
-            <h1 class="image__title">Syfy - Angular</h1>
+            <h1 class="image__title">Syfy - Angular Client</h1>
           </div>
         </div>
         <div class="modal syfyAngular-bg modal-bg-properties" id="syfyAngular">
@@ -73,20 +76,44 @@
             </div>
             <div class="modal-body">
               <p>
-                Syfy is a web app developed using the MEAN stack. It provides
-                registered users with information about Syfy movies, directors,
-                and genres. Users can create an account, update their personal
-                information, and add/remove movies from their favorites. It uses
-                the existing server-side RESTful API that I created using the
-                Node.js framework Express and the NoSQL database program
-                MongoDB.
+                The goal of this project was to learn how to utilize the MEAN
+                stack (MongoDB, Express, Angular, Node.js) to create a
+                responsive single-page application. It was designed with Angular
+                Material and SCSS. I used Compodoc to generate documentation
+                using the JSDoc comments on my app.
               </p>
-              <p>Built with Angular, Angular Material, MongoDB, Node.js</p>
+              <p></p>
+              <p></p>
+              <p>
+                For the server-side, I created a REST API and architected
+                database using Express.js and MongoDB. I created two different
+                client-sides with React and Angular.
+              </p>
+              <p>This is the Angular client-side.</p>
+              <h1>Features</h1>
+              <ul class="featureList">
+                <li>
+                  &#9658; Can create an account and can delete their account
+                  whenever they want
+                </li>
+                <li>
+                  &#9658; Registered users can update their personal information
+                  and add/remove movies from their favorites
+                </li>
+                <li>
+                  &#9658; Registered users can see information about Syfy
+                  movies, directors, and genres.
+                </li>
+              </ul>
+              <p>
+                Built with: TypeScript, Angular, Angular-Material, SCSS,
+                Compodoc for documentation, GitHub Pages for hosting
+              </p>
               <a
                 href="https://github.com/tadpoleann/syfy-client"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
               <a
                 href="https://tadpoleann.github.io/syfy-client/welcome"
@@ -105,7 +132,7 @@
             alt="React Movie App"
           />
           <div class="image__overlay">
-            <h1 class="image__title">SyfyMovies - React</h1>
+            <h1 class="image__title">Syfy - React Client</h1>
           </div>
         </div>
         <div class="modal syfyReact-bg modal-bg-properties" id="syfyReact">
@@ -119,7 +146,7 @@
                 &times;
               </button>
             </div>
-            <div class="modal-title">SyfyMovies - React</div>
+            <div class="modal-title">Syfy - React Client</div>
             <div class="videoWrapper">
               <iframe
                 src="https://player.vimeo.com/video/658991553?h=dda18c77d3"
@@ -134,15 +161,22 @@
                 provides registered users with information about Syfy movies,
                 directors, and genres. Users can create an account, update their
                 personal information, and add/remove movies from their
-                favorites. It uses the existing server-side RESTful API that I
-                created using the Node.js framework Express and MongoDB.
+                favorites.
               </p>
-              <p>Built with React, Bootstrap, MongoDB, Express, Node.js</p>
+              <p>
+                It uses the existing server-side REST API that I created using
+                the Node.js framework Express and MongoDB.
+              </p>
+              <p>This is the React client-side.</p>
+              <p>
+                Built with React, Bootstrap, MongoDB, Express, Node.js, Parcel,
+                Netlify for hosting
+              </p>
               <a
                 href="https://github.com/eggsistentialarugula/SYFYMovies-Client"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
               <a
                 href="https://mysyfymovies.netlify.app/"
@@ -175,35 +209,35 @@
                 &times;
               </button>
             </div>
-            <div class="modal-title">Syfy API</div>
-            <div class="videoWrapper">
-              <iframe
-                title="vimeo-player"
-                src="https://player.vimeo.com/video/658912792?h=da68825ffe"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <div class="modal-title">Syfy Backend (REST API)</div>
+            <img src="./assets/img/proj-imgs/movieAPISS.PNG" alt="" />
             <div class="modal-body">
               <p>
-                This project is a small web application that loads data from the
-                external Pokémon API. It provides information about 150 Pokémon
-                that you can also search for in the seachbar. Details are
-                displayed in a modal by clicking on the Pokémon's name. I used
-                Bootstrap to style the website and make it responsive.
+                This is the server-side component of Syfy. It interacts with a
+                non-relational database (MongoDB). The API is accessed by
+                commonly used HTTP methods like GET or POST. CRUD methods are
+                used to retrieve data and manipulate data from the database.
               </p>
-              <p>Built with HTML, CSS & Bootstrap, JavaScript & jQuery</p>
+              <ul class="featureList">
+                <li>&#9658; API endpoints were tested on Postman</li>
+                <li>&#9658; Documentation of endpoints hosted on Heroku</li>
+                <li>&#9658; Generated JSDoc documentation</li>
+              </ul>
+              <p>Built with Node.js, Express, MongoDB Atlas,</p>
               <a
-                href="https://github.com/eggsistentialarugula/Pokedex"
+                href="https://github.com/tadpoleann/syfy-api"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
               <a
-                href="https://eggsistentialarugula.github.io/Pokedex/"
+                href="https://nameless-atoll-42754.herokuapp.com/documentation.html"
                 class="button"
                 target="_blank"
-                >Live Preview</a
+                >Documentation</a
+              >
+              <a href="./casestudy.html" class="button" target="_blank"
+                >Case Study</a
               >
             </div>
           </div>
@@ -241,23 +275,47 @@
             </div>
             <div class="modal-body">
               <p>
-                The goal of this project was to build a serverless, progressive
-                web application with React using a test-driven development (TDD)
-                technique. The application uses the Google Calendar API to fetch
-                upcoming events and the serverless function is hosted by cloud
-                provider AWS. The beginning phase of this project involved
-                creating user stories for each of the features I would be
-                implementing in the app. I then turned these into
-                Given-When-Then statements that formed the basis of my TDD
-                approach. The app uses the Recharts library for data
-                visualisation.
+                This app displays events in different cities that are fetched
+                from the Google Calendar API.
               </p>
-              <p>Built with React, Google Calendar API, AWS</p>
+              <p>
+                The goal of this project was to learn the process of building a
+                serverless, progressive web app (PWA) that is tested with
+                test-driven development (TDD), uses OAuth (an authorization
+                protocol that allows one to login without sharing login
+                credentials), and implements data visualisation.
+              </p>
+              <p>
+                This project was started off with developing user stories for
+                each of the features to be implemented on the app. I turned
+                these into Given-When-Then statements that formed the basis of
+                my TDD approach.
+              </p>
+              <p>
+                Meet is a PWA, which means it's responsive, works offline, has
+                cross-platform compatibility, and can be installed on desktop
+                and can also be added to the main screen of your smartphone.
+              </p>
+              <h1>Features</h1>
+              <ul class="featureList">
+                <li>
+                  &#9658; Show/hide event details, filter by city name, choose
+                  number of events
+                </li>
+                <li>&#9658; Chart 1: Popularity of topics in the city</li>
+                <li>&#9658; Chart 2: Number of upcoming events per city</li>
+              </ul>
+              <p>
+                Built with: React, CSS, serverless (AWS lambda), OAuth (Google
+                Cloud Console), Recharts for data visualisation, Jest (Enyzme,
+                Cucumber, Puppeteer) for testing, Atatus for performance
+                monitoring
+              </p>
               <a
                 href="https://github.com/eggsistentialarugula/meet"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
               <a
                 href="https://eggsistentialarugula.github.io/meet/"
@@ -313,7 +371,7 @@
                 href="https://github.com/eggsistentialarugula/chat-app"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
             </div>
           </div>
@@ -341,28 +399,35 @@
               </button>
             </div>
             <div class="modal-title">Pokédex App</div>
-            <div class="videoWrapper">
-              <iframe
-                src="https://player.vimeo.com/video/658912792?h=da68825ffe"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img src="./assets/img/proj-imgs/PokedexSS.PNG" alt="" />
             <div class="modal-body">
               <p>
-                This project is a small web application that loads data from the
-                external Pokémon API. It provides information about 150 Pokémon
-                that you can also search for in the seachbar. Details are
-                displayed in a modal by clicking on the Pokémon's name. I used
-                Bootstrap to style the website and make it responsive.
+                A simple web app that shows a list of Pokemon from an external
+                API.
               </p>
-              <p>Built with HTML, CSS & Bootstrap, JavaScript & jQuery</p>
+
+              <h1>Features</h1>
+              <ul class="featureList">
+                <li>
+                  &#9658; Loads data from an external Pokémon API via fetch
+                </li>
+                <li>
+                  &#9658; Details are displayed in a modal by clicking on the
+                  Pokémon's name
+                </li>
+                <li>&#9658; Seach bar to filter Pokémon by name</li>
+              </ul>
+
+              <p>
+                The goal of this project was to learn DOM manipulation with
+                JavaScript, jQuery, Bootstrap styling, and code optimization
+                with linters and minifiers.
+              </p>
               <a
                 href="https://github.com/eggsistentialarugula/Pokedex"
                 class="button"
                 target="_blank"
-                >See Code on Github</a
+                >Github</a
               >
               <a
                 href="https://eggsistentialarugula.github.io/Pokedex/"

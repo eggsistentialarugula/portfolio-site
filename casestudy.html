@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Case Study</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <body class="case-body">
+      <header class="case-header">
+        <a href="index.html" class="back-link">&#9665; Go back to main page</a>
+      </header>
+      <div class="case-study" id="case-start">
+        <h1>&#9671; Case Study &#9671; Syfy full-stack project</h1>
+        <div class="intro">
+          <div class="intro-content">
+            <h2>Overview</h2>
+            <p>The Syfy project consists of client-side components and a server-side componenet. I created two client-sides, one was built with Angular and the other with React. The server-side was built with Express (Node.js framework) and MongoDB, a non-relational/NoSQL database management program.</p>
+            <h2>Purpose & Context</h2>
+            <p>I wanted to make two client-sides using the JavaScript frameworks/libraries Angular and React, both of which would use the server-side that I created for this project. I chose Syfy movies because there are are already public movie APIs, so I wanted my movie API to be more niche and just only have movies created by Syfy, an American basic cable channel. Syfy is most famous for their Sharknado series.</p>
+            <h2>Objective</h2>
+            <p>The goal of this project was to learn how to make full-stack applications and to understand how they work.</p>
+          </div>
+          <div class="intro-img">
+            <img src="./assets/img/proj-imgs/syfyAngularSS.PNG" alt="screenshot of movie home screen"/>
+            <img src="./assets/img/proj-imgs/syfyReactSS.PNG" alt="screenshot of movie home screen"/>
+          </div>
+        </div>
+        <h1 class="approach-title">The Process</h1>
+        <div class="server-side">
+          <div class="server-content">
+            <h2>Server-Side</h2>
+            <p>The backend consists of the server, business logic, and business
+              layers of the Syfy application. The REST API was built using JavaScript, Node.js, Express, and Mongoose. The REST API interacts with the non-relational/NoSQL database that I created with MongoDB. It interacts with my database through HTTP calls and common CRUD functions: create, read, update, delete. Mongoose is used to help with interactions.
+            </p>
+            <p>Endpoints are described 
+              <a
+                href="https://nameless-atoll-42754.herokuapp.com/documentation.html"
+                class="button"
+                target="_blank"
+                >&#9658; here
+              </a>
+            </p>
+            <p>The API was tested with Postman. I included user authentication and authorization code in the form of basic HTTP authentication and JWT authentication.</p>
+          </div>
+          <div class="server-img">
+            <img src="./assets/img/proj-imgs/unauthorized.PNG" alt="screenshot of unautohrized postman test" />
+            <img src="./assets/img/proj-imgs/getmoviesauthorized.PNG" alt="screenshot of authorized postman test" />
+          </div>
+        </div>
+        <div class="client-side">
+          <div class="client-content">
+            <h2>Angular Client-Side</h2>
+            <p>After completion of the REST API, I built the client-side with the MEAN stack. It is a responsive single-page application designed with Angular Material and SCSS. Anyone interested in creating an account can easily register and delete their account whenever they please. Registered users can view information about moviees and their respective genres and directors. Users can also update their profile information and add or delete movies to and from their favorites.</p>
+          </div>
+          <div class="client-img">
+            <div><img src="./assets/img/proj-imgs/loginRegScreenSS.PNG" alt="screenshot of login screen"/></div>
+            <div><img src="assets/img/proj-imgs/syfyMovieHomeSS.PNG" alt="screenshot of home screen"/></div>
+            <div><img src="assets/img/proj-imgs/syfyProfileSS.PNG" alt="screenshot of profile screen" /></div>
+          </div>
+        </div>
+        <div class="challenges">
+          <h2>Challenges</h2>
+          <p>This project came with a set of challenges that I would like to tackle again in future projects. I kept getting a CORS error while making the REST service.</p>
+        </div>
+      </div>
+    </body>
+  </html>
+  
+
+
+
+
+    <!-- <section class="syfyCS-main">
+      <div class="syfyCS-Container">
+        <div class="syfyCS-description">
+          <h1>Overview</h1>
+          <p>
+            This is the server-side component of my "Syfy" movies web
+            application. It was built using JavaScript, Node.js, Express, and
+            MongoDB.
+          </p>
+          <h1>Objective</h1>
+          <p>
+            The goal of this project was to learn the anatomy of REST and the creation process of RESTful API. 
+          </p>
+          <h1>Purpose & Context</h1>
+          <p>
+            I wanted to put this project on my portfolio and use it for the
+            client-sides that I'll later create, so I can have projects that
+            utilize two popular software stacks that contain both frontend and
+            backend: MERN and MEAN.
+          </p>
+          <h1>API Design</h1>
+          <p>
+            The backend consists of the server, business logic, and business
+            layers of the Syfy application. The REST API and architected
+            database was built using JavaScript, Node.js, Express, and MongoDB.
+            The REST API interacts with the non-relational/NoSQL database that I
+            created with MongoDB. CRUD methods are used to retrieve, store, and
+            manipulate stored data in the database.
+          </p>
+          <h1>Client-side component: Angular</h1>
+        </div>
+      </div> -->
+
+      <div class="objective"></div>
+    </section>
+  </body>
+</html>

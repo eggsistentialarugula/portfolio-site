@@ -24,3 +24,10 @@ window.onclick = (e) => {
     overlay.classList.remove("active");
   }
 };
+
+//load everything before the typing animation
+const typeAniText = document.querySelector(".top-container h1");
+
+window.onload = () => {
+  typeAniText.classList.add("greeting");
+};
