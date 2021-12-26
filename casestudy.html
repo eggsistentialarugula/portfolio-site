@@ -20,8 +20,9 @@
         <div class="intro-content">
           <h2>Overview</h2>
           <p>
-            This project was created with the
-            <span class="bold">MEAN</span> stack.
+            These projects were created with the
+            <span class="bold">MEAN</span> and
+            <span class="bold">MERN</span> stack.
           </p>
           <ul class="featureList">
             <li><span class="bold blue-green">M</span>ongoDB - the database</li>
@@ -29,8 +30,9 @@
               <span class="bold blue-green">E</span>xpress - the web framework
             </li>
             <li>
-              <span class="bold blue-green">A</span>ngular - the front-end
-              framework
+              <span class="bold blue-green">A</span>ngular,
+              <span class="bold blue-green">R</span>eact - the front-end
+              frameworks
             </li>
             <li>
               <span class="bold blue-green">N</span>ode.js - the web server
@@ -39,18 +41,20 @@
           <h2>Purpose & Context</h2>
           <p>
             I wanted to make two client-sides using the JavaScript
-            frameworks/libraries Angular and React, both of which would use the
-            server-side that I created for this project. I chose Syfy movies
-            because there are already public movie APIs, so I wanted my movie
-            API to be more niche and just only have movies created by or hosted
-            on Syfy, an American basic cable channel. Syfy is most famous for
-            their Sharknado series.
+            frameworks/libraries Angular and React, both of which would use two
+            server-sides that I respectively created for both of the
+            client-sides. I chose Syfy movies because there are already public
+            movie APIs, so I wanted my movie API to be more niche and just only
+            have movies created by or hosted on Syfy, an American basic cable
+            channel. Syfy is most famous for their Sharknado series.
           </p>
           <h2>Objective</h2>
           <p>
             I created this project so that I can understand the
-            <span class="bold">MEAN</span> stack components and have first-hand
-            experience in architecting an application that utilizes the stack.
+            <span class="bold">MEAN</span> and
+            <span class="bold">MERN</span> stack components and have first-hand
+            experience in architecting an application that utilizes these
+            stacks.
           </p>
         </div>
         <div class="intro-img">
@@ -58,9 +62,13 @@
             src="./assets/img/proj-imgs/syfyAngularSS.PNG"
             alt="screenshot of movie home screen of Angular app"
           />
+          <img
+            src="./assets/img/proj-imgs/syfyReactSS.PNG"
+            alt="screenshot of movie home screen of Angular app"
+          />
         </div>
       </div>
-      <h1 class="approach-title">Server-Side</h1>
+      <h1 class="approach-title" id="server-side">Server-Side</h1>
       <div class="server-side">
         <div class="server-content">
           <h2>Priniciple Technologies</h2>
@@ -72,16 +80,18 @@
               <span class="vermillion bold">|</span> Language: JavaScript
             </li>
             <li>
-              <span class="bold blue-green">Frontend</span> - Angular
+              <span class="bold blue-green">Frontends</span> - Angular
               <span class="vermillion bold">|</span> Language: TypeScript
+              <span class="blue-green">&#9671;</span> React
+              <span class="vermillion bold">|</span> Language: JavaScript
             </li>
           </ul>
           <p>
-            The backend consists of a REST API that was built using JavaScript,
-            Node.js, Express, and Mongoose. The REST API interacts with the
-            non-relational/NoSQL database that I created with MongoDB. It
-            interacts with my database through HTTP calls and common CRUD
-            functions: create, read, update, delete. Mongoose is used to
+            The backends for each client-side consists of a REST API that was
+            built using JavaScript, Node.js, Express, and Mongoose. The REST API
+            interacts with the non-relational/NoSQL database that I created with
+            MongoDB. It interacts with my database through HTTP calls and common
+            CRUD functions: create, read, update, delete. Mongoose is used to
             interact with the data through Mongoose models.
           </p>
           <p>
@@ -92,50 +102,69 @@
               target="_blank"
               >&#9658; here
             </a>
+            for the server-side of the MEAN project.
+          </p>
+          <p>
+            Endpoints are described
+            <a
+              href="https://mysyfymovies.herokuapp.com/documentation.html"
+              class="button"
+              target="_blank"
+              >&#9658; here
+            </a>
+            for the server-side of the MERN project.
           </p>
           <p>
             The API was tested with Postman. I included user authentication and
             authorization code in the form of basic HTTP authentication and JWT
             authentication.
           </p>
-          <h2>Why I chose MEAN</h2>
+          <h2>Why I chose MEAN and MERN</h2>
           <p>
-            The MEAN stack combines some of the best modern web technologies
-            into a powerful and flexbile stack.
+            These stacks combine some of the best modern web technologies into a
+            powerful and flexbile stack.
           </p>
           <p>
             Node.js is the foundation of this stack. It contains a built-in HTTP
-            server library, which means that you don't need to run a separate
-            web server program such as Apache. This gives the developer greater
-            control of how their web server works. Node.js is extremely
-            efficient and uses fewer server resources compared to other
-            mtainstream server technologies, when coded correctly. Express is
-            the Node web app framework, and together with Node.js, they underpin
-            the entire stack.
+            server library, which means that I didn't need to run a separate web
+            server program such as Apache. This gave me more control on how the
+            web server works. Node.js is extremely efficient and uses fewer
+            server resources compared to other mtainstream server technologies,
+            when coded correctly. Express is the Node web app framework, and
+            together with Node.js, they underpin the entire stack of my project.
           </p>
           <p>
             MongoDB is a document-oriented database program. It uses a
             non-relational approach, so it's less-structured as opposed to a
             relational database (such as SQL), which means that a collection of
-            documents can have a wide variety of data inside. Applications need
-            structure to their data, so this is where Mongoose comes in -
-            Mongoose defines a schema for the documents.
+            documents can have a wide variety of data inside - this made the
+            creation of the database more flexible for me. Applications need
+            structure to their data, so this is where Mongoose comes in - I used
+            Mongoose to define schema for the documents.
           </p>
         </div>
         <div class="server-img">
           <img
+            src="./assets/img/proj-imgs/restAPICodeSS.PNG"
+            alt="screenshot of the server-side node.js code"
+          />
+          <img
+            src="./assets/img/proj-imgs/mongodatabaseSS.PNG"
+            alt="screenshot of my mongodb movie data returned in wondows powershell"
+          />
+          <!-- <img
             src="./assets/img/proj-imgs/unauthorized.PNG"
             alt="screenshot of unautohrized postman test"
           />
           <img
             src="./assets/img/proj-imgs/getmoviesauthorized.PNG"
             alt="screenshot of authorized postman test"
-          />
+          /> -->
         </div>
       </div>
       <div class="client-side">
         <div class="client-content">
-          <h2>Angular Client-Side</h2>
+          <h1>Angular Client-Side</h1>
           <p>
             After completion of the REST API, I built the client-side with the
             MEAN stack. It is a responsive single-page application designed with
@@ -150,31 +179,75 @@
           <div>
             <img
               src="./assets/img/proj-imgs/loginRegScreenSS.PNG"
-              alt="screenshot of login screen"
+              alt="screenshot of Angular login screen"
             />
           </div>
           <div>
             <img
               src="assets/img/proj-imgs/syfyMovieHomeSS.PNG"
-              alt="screenshot of home screen"
+              alt="screenshot of Angular home screen"
             />
           </div>
           <div>
             <img
               src="assets/img/proj-imgs/syfyProfileSS.PNG"
-              alt="screenshot of profile screen"
+              alt="screenshot of Angular profile screen"
+            />
+          </div>
+        </div>
+        <div class="client-content">
+          <h1>React Client-Side</h1>
+          <p>
+            After completion of the REST API, I built the client-side with React
+            and React-Redux. It is a responsive single-page application designed
+            with React Bootstrap and CSS. Anyone interested in creating an
+            account can easily register and delete their account whenever they
+            please. Registered users can view information about movies and their
+            respective genres and directors. They can check other movies that
+            belong in the same genre and other Syfy movies that the same
+            director created. Users can also update their profile information
+            and add or delete movies to and from their favorites.
+          </p>
+        </div>
+        <div class="client-img">
+          <div>
+            <img
+              src="./assets/img/proj-imgs/loginRegScreenReactSS.PNG"
+              alt="screenshot of React login screen"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/img/proj-imgs/syfyReactHomeSS.PNG"
+              alt="screenshot of React home screen"
+            />
+          </div>
+          <div>
+            <img
+              src="assets/img/proj-imgs/syfyReactProfileSS.PNG"
+              alt="screenshot of React profile screen"
             />
           </div>
         </div>
       </div>
       <div class="challenges">
-        <h2>Challenges</h2>
+        <h2>Final thoughts</h2>
         <p>
-          This project came with a set of challenges that I would like to tackle
-          again in future projects. I had a long-lasting CORS error and I hope I
-          don't encounter it again in the future. I really like how TypeScript
-          is object-oriented, it felt more logical and organized than JavaScript
-          itself.
+          It's hard to decide what the most challenging aspect of this project
+          was, because I thought it was challenging entirely. React Redux was
+          very confusing and I'm going to have to do more studying on it. It was
+          my first time creating a full-stack application. But it felt great
+          when I finished and it's very fun and exciting to overcome all the
+          errors and obstacles while making these projects, so I will definitely
+          be making more full-stack projects during my free time in order to
+          improve and become more familiar with the JavaScript ecosystem.
+        </p>
+        <p>
+          My takeaway from creating these projects is that I have a preference
+          for Angular. While making the Angular project, I realized that Object
+          Oriented programming feels more organized and efficient. These were my
+          first projects created wth React and Angular though, so I might change
+          my mind in the future after I create more applications with them.
         </p>
       </div>
     </div>

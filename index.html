@@ -21,17 +21,14 @@
     </button>
     <nav id="navbar" data-visible="false" tabindex="0">
       <ul class="nav-menu" role="menubar" aria-haspopup="true">
-        <!-- <li role="menuitem " aria-label="Home" class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li> -->
         <li class="nav-item" role="menuitem" aria-label="Portfolio">
           <a class="nav-link" href="#portfolio">Portfolio</a>
         </li>
         <li class="nav-item" role="menuitem" aria-label="About">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item" role="menuitem" aria-label="Work">
-          <a class="nav-link" href="#">Work</a>
+          <a class="nav-link" href="#work">Work</a>
         </li>
         <li class="nav-item" role="menuitem" aria-label="Contact">
           <a class="nav-link" href="#">Contact</a>
@@ -39,7 +36,7 @@
       </ul>
     </nav>
     <div class="top-container">
-      <h1 class="hideHello">Hello!</h1>
+      <h1 class="hideHello">welcome to my portfolio</h1>
     </div>
     <section class="projects-section" id="portfolio">
       <h1 class="proj-title">Projects</h1>
@@ -66,14 +63,10 @@
               </button>
             </div>
             <div class="modal-title">Syfy - Angular Client</div>
-            <div class="videoWrapper">
-              <iframe
-                src="https://player.vimeo.com/video/658954232?h=c8879cb603"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img
+              src="./assets/img/proj-imgs/syfyAngularSS.PNG"
+              alt="syfyAngular screenshot"
+            />
             <div class="modal-body">
               <p>
                 The goal of this project was to learn how to utilize the MEAN
@@ -113,7 +106,7 @@
                 href="https://github.com/tadpoleann/syfy-client"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
               <a
                 href="https://tadpoleann.github.io/syfy-client/welcome"
@@ -150,14 +143,7 @@
               </button>
             </div>
             <div class="modal-title">Syfy - React Client</div>
-            <div class="videoWrapper">
-              <iframe
-                src="https://player.vimeo.com/video/658991553?h=dda18c77d3"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img src="./assets/img/proj-imgs/syfyReactSS.PNG" alt="" />
             <div class="modal-body">
               <p>
                 SyfyMovies is web app developed using the MERN stack. It
@@ -172,14 +158,14 @@
               </p>
               <p>This is the React client-side.</p>
               <p>
-                Built with React, Bootstrap, MongoDB, Express, Node.js, Parcel,
-                Netlify for hosting
+                Built with React, React-Redux, React Bootstrap, Netlify for
+                hosting
               </p>
               <a
                 href="https://github.com/eggsistentialarugula/SYFYMovies-Client"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
               <a
                 href="https://mysyfymovies.netlify.app/"
@@ -187,11 +173,14 @@
                 target="_blank"
                 >Live Preview</a
               >
+              <a href="./casestudy.html" class="button" target="_blank"
+                >Case Study</a
+              >
             </div>
           </div>
         </div>
 
-        <!-- Syfy API, might take out this section and just write in description of movie apps that I created the corresponding server-sides and put links to its documentation and github repo-->
+        <!-- Syfy API -->
         <div class="proj-item" data-target="#movieAPIModal">
           <img
             src="./assets/img/samuel-regan-asante-wMkaMXTJjlQ-unsplash.jpg"
@@ -223,15 +212,15 @@
               </p>
               <ul class="featureList">
                 <li>&#9658; API endpoints were tested on Postman</li>
-                <li>&#9658; Documentation of endpoints hosted on Heroku</li>
+                <li>&#9658; REST API is hosted on Heroku</li>
                 <li>&#9658; Generated JSDoc documentation</li>
               </ul>
-              <p>Built with Node.js, Express, MongoDB Atlas,</p>
+              <p>Built with Node.js, Express, MongoDB</p>
               <a
                 href="https://github.com/tadpoleann/syfy-api"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
               <a
                 href="https://nameless-atoll-42754.herokuapp.com/documentation.html"
@@ -239,8 +228,11 @@
                 target="_blank"
                 >Documentation</a
               >
-              <a href="./casestudy.html" class="button" target="_blank"
-                >Case Study</a
+              <a
+                href="./casestudy.html#server-side"
+                class="button"
+                target="_blank"
+                >More info</a
               >
             </div>
           </div>
@@ -268,14 +260,7 @@
               </button>
             </div>
             <div class="modal-title">Meet App</div>
-            <div class="videoWrapper">
-              <iframe
-                src="https://player.vimeo.com/video/658985102?h=0b5dccace0"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img src="./assets/img/proj-imgs/meetSS.PNG" alt="" />
             <div class="modal-body">
               <p>
                 This app displays events in different cities that are fetched
@@ -318,7 +303,7 @@
                 href="https://github.com/eggsistentialarugula/meet"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
               <a
                 href="https://eggsistentialarugula.github.io/meet/"
@@ -352,14 +337,10 @@
               </button>
             </div>
             <div class="modal-title">Chat App</div>
-            <div class="videoWrapper">
-              <iframe
-                title="vimeo-player"
-                src="https://player.vimeo.com/video/658912792?h=da68825ffe"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
+            <img
+              src="./assets/img/proj-imgs/chatAppSS.png"
+              alt="chat app screenshot"
+            />
             <div class="modal-body">
               <p>
                 Chat App is a native chat app for mobile devices developed using
@@ -374,7 +355,7 @@
                 href="https://github.com/eggsistentialarugula/chat-app"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
             </div>
           </div>
@@ -383,7 +364,7 @@
         <!-- === Pokedex === -->
         <div class="proj-item" data-target="#pokedexModal">
           <img
-            src="./assets/img//thimo-pedersen-dip9IIwUK6w-unsplash.jpg"
+            src="./assets/img/thimo-pedersen-dip9IIwUK6w-unsplash.jpg"
             alt="Pokedex App"
           />
           <div class="image__overlay">
@@ -430,7 +411,7 @@
                 href="https://github.com/eggsistentialarugula/Pokedex"
                 class="button"
                 target="_blank"
-                >Github</a
+                >Github Repo</a
               >
               <a
                 href="https://eggsistentialarugula.github.io/Pokedex/"
@@ -441,9 +422,95 @@
             </div>
           </div>
         </div>
+        <!-- === Pokedex === -->
+        <div class="proj-item" data-target="#portfolioModal">
+          <img
+            src="./assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg"
+            alt="Pokedex App"
+          />
+          <div class="image__overlay">
+            <h1 class="image__title">Portfolio Website</h1>
+          </div>
+        </div>
+        <div class="modal portfolio-bg modal-bg-properties" id="portfolioModal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                aria-label="close"
+                class="close-btn"
+                data-target="#portfolioModal"
+              >
+                &times;
+              </button>
+            </div>
+            <div class="modal-title">Portfolio Site</div>
+            <img src="./assets/img/proj-imgs/portfolioSS.PNG" alt="" />
+            <div class="modal-body">
+              <p>
+                My portfolio website that shows my projects and some information
+                about myself!
+              </p>
+              <h1>Features</h1>
+              <ul class="featureList">
+                <li>
+                  &#9658; I used vanilla JS to create the modal windows and
+                  hamburger menu
+                </li>
+                <li>
+                  &#9658; Semantic HTML basics such as header, section, footer
+                </li>
+                <li>
+                  &#9658; Fully responsive thanks to CSS grid, flexbox, and
+                  media queries
+                </li>
+                <li>&#9658; Full accessibility</li>
+              </ul>
+              <p>
+                I decided to not use any CSS or JavaScript libraries/frameworks,
+                so I can practice and become more comfortable with CSS and
+                vanilla JS. Every line of code on my portfolio website is hand
+                written by me :)
+              </p>
+              <a
+                href="https://github.com/eggsistentialarugula/portfolio-site"
+                class="button"
+                target="_blank"
+                >Github Repo</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <div id="overlay"></div>
+    <!-- About Section -->
+    <h1 class="about-title" id="about">About me</h1>
+    <section class="about-page">
+      <p class="about-page_introduction">
+        I love the process of making websites come to life - turning ideas into
+        functioning and attention-grabbing web applications is addicting and
+        fun. You never stop learning in this field and this aspect of
+        development is what draws me to this field as it motivates me to
+        continue improving myself. Studying math in university put my logical
+        thinking and abstract reasoning skills to the test, and I'll be sure to
+        make use of it if you hire me! I'm currently learning TypeScript and C#
+        to improve my object-oriented programming skills. On my free time, I
+        like to play pc games, watch nature documentaries, and run or play
+        soccer at the nearby park.
+      </p>
+    </section>
+    <!-- CONTACT Section -->
+    <section class="page-footer page-contact" id="contact">
+      <h1 class="contact-title">Contact Info</h1>
+      <div class="page-contact_info">
+        Phone: <a href="tel:+112345678900">+1 562 652 0530</a><br />
+        Email: <a href="madeupemail@gmail.com">jtworking123@gmail.com</a> <br />
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <p>Copyright Jeannie</p>
+    </footer>
     <script src="./script.js"></script>
     <script src="./nav.js"></script>
   </body>

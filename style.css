@@ -14,7 +14,7 @@
   --pale-pink-rgb-values: 250, 216, 214;
   --seashell-rgb-values: 255, 245, 238;
 
-  --typewriterSpeed: 1.5s;
+  --typewriterSpeed: 2.5s;
 }
 *,
 *::before,
@@ -27,7 +27,7 @@ body {
   padding: 0;
   background-color: var(--raisin-black);
   font-family: "Philosopher", sans-serif;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 }
 img {
   display: block;
@@ -143,7 +143,7 @@ h1.greeting {
   visibility: visible;
   color: var(--blue-green);
   position: relative;
-  letter-spacing: 0.9rem;
+  letter-spacing: 0.1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -158,12 +158,12 @@ h1.greeting::after {
 }
 h1.greeting::before {
   background-color: var(--raisin-black);
-  animation: typewriter var(--typewriterSpeed) steps(8) 2s forwards;
+  animation: typewriter var(--typewriterSpeed) steps(23) 1.5s forwards;
 }
 h1.greeting::after {
   width: 0.4rem;
   background: var(--seashell);
-  animation: typewriter var(--typewriterSpeed) steps(8) 2s forwards,
+  animation: typewriter var(--typewriterSpeed) steps(23) 1.5s forwards,
     blinkTypewriter 650ms steps(8) infinite;
 }
 @keyframes typewriter {
@@ -233,7 +233,7 @@ a.nav-link:hover:after {
 }
 @supports (backdrop-filter: blur(0.5rem)) {
   .scroll {
-    background: rgba(var(--raisin-black-rgb-values), 0.2);
+    background: rgba(var(--raisin-black-rgb-values), 0.6);
     backdrop-filter: blur(0.6rem);
   }
 }
@@ -401,7 +401,7 @@ section#work.projects-section {
 }
 .chatApp-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/img/proj-imgs/chatAppSS.png");
+    url("/assets/img/proj-imgs/yamalotbg.png");
 }
 .pokedex-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -425,7 +425,7 @@ section#work.projects-section {
   transition: 0.5s;
 }
 .modal-content img:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
 }
 .videoWrapper {
   position: relative;
@@ -483,6 +483,14 @@ button.close-btn:hover {
   transform: rotateY(180deg);
   color: var(--vermillion);
 }
+/* == About section == */
+p.about-page_introduction {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  line-height: 25px;
+  color: var(--blue-green);
+}
+
 @media screen and (min-width: 680px) {
   .videoWrapper {
     padding-bottom: 46.25%;
@@ -503,7 +511,7 @@ button.close-btn:hover {
     padding: 0 1rem;
   }
   .modal-body {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     padding: 1rem 4rem 0.25rem;
   }
   .modal-title {
@@ -522,7 +530,7 @@ button.close-btn:hover {
     margin: 0.2rem 0.2rem 1.5rem;
   }
   .modal-content img {
-    width: 65%;
+    width: 75%;
     margin: 0 auto;
   }
 }
@@ -532,6 +540,9 @@ button.close-btn:hover {
   }
   .modal-content img {
     padding: 0 2rem;
+  }
+  p.about-page_introduction {
+    padding: 1rem 20rem;
   }
 }
 @media screen and (min-width: 1450px) {
@@ -556,7 +567,6 @@ button.close-btn:hover {
 #overlay.active {
   display: block;
 }
-
 /* === Case Study === */
 .case-body {
   color: var(--seashell);
@@ -605,12 +615,6 @@ button.close-btn:hover {
   text-align: center;
 }
 
-.intro img,
-.server-img img,
-.client-img img {
-  box-shadow: 2px 2px 10px -3px rgba(52, 58, 64, 0.99);
-}
-
 .intro-img,
 .server-img,
 .client-img {
@@ -626,30 +630,10 @@ button.close-btn:hover {
 }
 
 .server-img img,
-.client-img img {
-  margin-bottom: 1em;
-}
-
-.client-content {
-  padding-top: 0;
-}
-
-.challenges,
-.duration,
-.credits {
-  margin-top: 1.5em;
-}
-
-.social.case-social {
-  padding-top: 1em;
-}
-
-.case-footer {
-  padding: 2em 1em 0.5em;
-  background: #343a40;
-  color: #fff;
-  border-top: 8px solid #e5676f;
-  text-align: center;
+.client-img img,
+.intro-img img {
+  min-width: 75%;
+  margin-bottom: 1rem;
 }
 
 /* Large tablets and laptops */
@@ -657,32 +641,44 @@ button.close-btn:hover {
   .approach-title {
     margin-top: 1rem;
   }
-  .server-side {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
   .server-content {
-    margin-left: 2em;
+    margin-left: 2rem;
   }
   .server-img {
     margin-right: 1rem;
   }
   .client-img {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     justify-content: space-between;
   }
-  .client-img img {
-    width: 95%;
+  .client-img img,
+  .server-img img,
+  .intro-img img {
+    max-width: 95%;
+  }
+  .challenges {
+    padding: 1rem 5rem;
+    margin-top: 1.5em;
+  }
+  .client-content {
+    padding: 0 6rem 0;
   }
 }
 
 @media screen and (min-width: 1580px) {
   .intro {
     display: flex;
+  }
+  .intro-content {
+    padding-right: 5rem;
+  }
+  .server-content {
+    margin-left: 0.2rem;
+    padding-right: 5rem;
+  }
+  .server-side {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
