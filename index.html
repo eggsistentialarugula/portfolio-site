@@ -31,7 +31,7 @@
           <a class="nav-link" href="#work">Work</a>
         </li>
         <li class="nav-item" role="menuitem" aria-label="Contact">
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
@@ -422,70 +422,71 @@
             </div>
           </div>
         </div>
-        <!-- === Pokedex === -->
-        <div class="proj-item" data-target="#portfolioModal">
-          <img
-            src="./assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg"
-            alt="Pokedex App"
-          />
-          <div class="image__overlay">
-            <h1 class="image__title">Portfolio Website</h1>
-          </div>
+      </div>
+    </section>
+    <section class="portfolio-section">
+      <!-- === portfolio === -->
+      <div class="proj-item" data-target="#portfolioModal">
+        <img
+          src="./assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg"
+          alt="Portfolio site picture"
+        />
+        <div class="image__overlay">
+          <h1 class="image__title">Portfolio Website</h1>
         </div>
-        <div class="modal portfolio-bg modal-bg-properties" id="portfolioModal">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                aria-label="close"
-                class="close-btn"
-                data-target="#portfolioModal"
-              >
-                &times;
-              </button>
-            </div>
-            <div class="modal-title">Portfolio Site</div>
-            <img src="./assets/img/proj-imgs/portfolioSS.PNG" alt="" />
-            <div class="modal-body">
-              <p>
-                My portfolio website that shows my projects and some information
-                about myself.
-              </p>
-              <h1>Features</h1>
-              <ul class="featureList">
-                <li>
-                  &#9658; I used vanilla JS to create the modal windows and
-                  hamburger menu
-                </li>
-                <li>
-                  &#9658; Semantic HTML basics such as header, section, footer
-                </li>
-                <li>
-                  &#9658; Fully responsive thanks to CSS grid, flexbox, and
-                  media queries
-                </li>
-                <li>&#9658; Full accessibility</li>
-              </ul>
-              <p>
-                I decided to not use any libraries or frameworks, so I can
-                practice and become more comfortable with CSS and vanilla JS.
-                Every line of code on my portfolio website is hand written by
-                me.
-              </p>
-              <a
-                href="https://github.com/eggsistentialarugula/portfolio-site"
-                class="button"
-                target="_blank"
-                >Github Repo</a
-              >
-            </div>
+      </div>
+      <div class="modal portfolio-bg modal-bg-properties" id="portfolioModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              aria-label="close"
+              class="close-btn"
+              data-target="#portfolioModal"
+            >
+              &times;
+            </button>
+          </div>
+          <div class="modal-title">Portfolio Site</div>
+          <img src="./assets/img/proj-imgs/portfolioSS.PNG" alt="" />
+          <div class="modal-body">
+            <p>
+              My portfolio website that shows my projects and some information
+              about myself.
+            </p>
+            <h1>Features</h1>
+            <ul class="featureList">
+              <li>
+                &#9658; I used vanilla JS to create the modal windows and
+                hamburger menu
+              </li>
+              <li>
+                &#9658; Semantic HTML basics such as header, section, footer
+              </li>
+              <li>
+                &#9658; Fully responsive thanks to CSS grid, flexbox, and media
+                queries
+              </li>
+              <li>&#9658; Full accessibility</li>
+            </ul>
+            <p>
+              I decided to not use any libraries or frameworks, so I can
+              practice and become more comfortable with CSS and vanilla JS.
+              Every line of code on my portfolio website is hand written by me.
+            </p>
+            <a
+              href="https://github.com/eggsistentialarugula/portfolio-site"
+              class="button"
+              target="_blank"
+              >Github Repo</a
+            >
           </div>
         </div>
       </div>
     </section>
     <div id="overlay"></div>
     <!-- About Section -->
-    <h1 class="about-title" id="about">About me</h1>
     <section class="about-page">
+      <h1 class="about-title" id="about">About me</h1>
       <p class="about-page_introduction">
         I love the process of making websites come to life - turning ideas into
         functioning and attention-grabbing web applications is addicting and
@@ -500,7 +501,7 @@
       </p>
     </section>
     <!-- CONTACT Section -->
-    <section class="page-footer page-contact" id="contact">
+    <section class="contact-section" id="contact">
       <h1 class="contact-title">Contact Info</h1>
       <div class="page-contact_info">
         Phone: <a href="tel:+112345678900">+1 562 652 0530</a><br />
@@ -508,7 +509,7 @@
       </div>
     </section>
     <!-- Footer -->
-    <footer>
+    <footer class="footer-section">
       <p>Copyright Jeannie</p>
     </footer>
     <script src="./script.js"></script>

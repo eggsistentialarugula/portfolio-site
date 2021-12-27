@@ -483,11 +483,47 @@ button.close-btn:hover {
   transform: rotateY(180deg);
   color: var(--vermillion);
 }
+/* == Portfolio Section == */
+.portfolio-section {
+  padding: 1rem;
+}
 /* == About section == */
 p.about-page_introduction {
+  margin-top: 0;
   font-size: 1.2rem;
-  padding: 1rem 2rem;
   line-height: 25px;
+  color: var(--seashell);
+}
+.about-page {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(var(--vermillion-rgb-values), 0.2);
+}
+.about-title {
+  margin-bottom: 0.5rem;
+  color: var(--pale-pink);
+}
+
+/* == Contact Section == */
+.contact-section {
+  background-color: rgba(var(--blue-green-rgb-values), 0.2);
+  color: var(--seashell);
+  text-align: center;
+  padding: 1rem;
+}
+.contact-title {
+  margin: 0;
+}
+.page-contact_info {
+  padding-top: 1rem;
+}
+.page-contact_info a {
+  color: var(--pale-pink);
+  text-decoration: none;
+}
+/* == Footer == */
+.footer-section {
+  text-align: center;
   color: var(--blue-green);
 }
 
@@ -518,6 +554,11 @@ p.about-page_introduction {
     font-size: 2.5rem;
     padding: 0.5rem 0.5rem 2rem;
   }
+  .portfolio-section {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: 70%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .modal {
@@ -533,6 +574,9 @@ p.about-page_introduction {
     width: 75%;
     margin: 0 auto;
   }
+  .portfolio-section {
+    width: 55%;
+  }
 }
 @media screen and (min-width: 1280px) {
   .videoWrapper {
@@ -544,15 +588,24 @@ p.about-page_introduction {
   p.about-page_introduction {
     padding: 1rem 20rem;
   }
+  .portfolio-section {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 1450px) {
   .videoWrapper {
     padding-bottom: 36.25%;
   }
+  .portfolio-section {
+    width: 45%;
+  }
 }
 @media screen and (min-width: 1620px) {
   .videoWrapper {
     padding-bottom: 34.25%;
+  }
+  .portfolio-section {
+    width: 40%;
   }
 }
 #overlay {
