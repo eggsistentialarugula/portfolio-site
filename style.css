@@ -493,6 +493,7 @@ p.about-page_introduction {
   font-size: 1.2rem;
   line-height: 25px;
   color: var(--seashell);
+  padding: 0.5rem 5rem;
 }
 .about-page {
   padding-top: 0.5rem;
