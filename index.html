@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./productionstyle.css" /> -->
   </head>
   <body>
     <button
@@ -36,7 +37,7 @@
       </ul>
     </nav>
     <div class="top-container">
-      <h1 class="hideHello">welcome to my portfolio</h1>
+      <h1 class="hideHello">Hi, I'm Jeannie</h1>
     </div>
     <section class="projects-section" id="portfolio">
       <h1 class="proj-title">Projects</h1>
@@ -102,6 +103,12 @@
                 Built with: TypeScript, Angular, Angular-Material, SCSS,
                 Compodoc for documentation, GitHub Pages for hosting
               </p>
+              <a
+                href="https://trello.com/b/m2ZHNLZz/61"
+                class="button"
+                target="_blank"
+                >Kanban Board</a
+              >
               <a
                 href="https://github.com/tadpoleann/syfy-client"
                 class="button"
@@ -277,7 +284,7 @@
                 This project was started off with developing user stories for
                 each of the features to be implemented on the app. I turned
                 these into Given-When-Then statements that formed the basis of
-                my TDD approach.
+                my TDD approach with Enzyme and Jest.
               </p>
               <p>
                 Meet is a PWA, which means it's responsive, works offline, has
@@ -344,13 +351,18 @@
             <div class="modal-body">
               <p>
                 Chat App is a native chat app for mobile devices developed using
-                Expo and Google Firestore Database (to store the chat messages).
-                The app provides users with a chat interface and options to
-                share images and their location. Chat App is optimized for both
-                Android and iOS devices. This app was tested on both an android
-                emulator and an iOS simulator.
+                React Native and Expo, Gifted Chat library to create the chat
+                interface, Google Firestore Database (to store chat
+                conversations), and Google Firebase authentication to
+                authenticate users anonymously. The app provides users with a
+                chat interface and options to share images and their location.
+                Chat App is optimized for both Android and iOS devices. This app
+                was tested on both an android emulator and an iOS simulator.
               </p>
-              <p>Built with React Native, Expo, Google Firestore DB</p>
+              <p>
+                Built with React Native, Expo, Google Firestore DB, Google
+                Firebase authentication, Gifted Chat library
+              </p>
               <a
                 href="https://github.com/eggsistentialarugula/chat-app"
                 class="button"
@@ -485,8 +497,8 @@
     </section>
     <div id="overlay"></div>
     <!-- About Section -->
-    <section class="about-page">
-      <h1 class="about-title" id="about">About me</h1>
+    <section class="about-page" id="about">
+      <h1 class="about-title">About me</h1>
       <p class="about-page_introduction">
         I love the process of making websites come to life - turning ideas into
         functioning and attention-grabbing web applications is addicting and
@@ -498,19 +510,69 @@
         the nearby park.
       </p>
     </section>
-    <!-- CONTACT Section -->
+    <!-- CONTACT INFO Section -->
     <section class="contact-section" id="contact">
       <h1 class="contact-title">Contact Info</h1>
       <div class="page-contact_info">
         Phone: <a href="tel:+112345678900">+1 562 652 0530</a><br />
-        Email: <a href="madeupemail@gmail.com">jtworking123@gmail.com</a> <br />
+        Email: <a href="madeupemail@gmail.com">jtworking123@gmail.com</a><br />
+        Github accounts:
+        <a target="_blank" href="https://github.com/eggsistentialarugula"
+          >eggsistentialarugula</a
+        >
+        <span class="vermillion bold">&#9671; </span>
+        <a target="_blank" href="https://github.com/tadpoleann">tadpoleann</a>
       </div>
     </section>
+    <!-- Contact form -->
+    <h1>Get in touch</h1>
+    <div class="form-container">
+      <form
+        class="contact-bg modal-bg-properties"
+        onsubmit="sendEmail(); reset(); return false;"
+      >
+        <span class="inputTitle">Name</span
+        ><input
+          type="text"
+          id="name"
+          class="input"
+          placeholder="Your Name"
+          required
+        />
+        <span class="inputTitle">Email</span
+        ><input
+          type="email"
+          id="email"
+          class="input"
+          placeholder="Email"
+          required
+        />
+        <span class="inputTitle">Phone</span
+        ><input
+          type="text"
+          id="phone"
+          class="input"
+          placeholder="Phone no."
+          required
+        />
+        <textarea
+          class="textArea"
+          id="message"
+          rows="8"
+          placeholder="Write your message here :)"
+        ></textarea>
+        <button class="contact-button" type="submit">Send</button>
+      </form>
+    </div>
+
     <!-- Footer -->
     <footer class="footer-section">
-      <p>Copyright &#169; Jeannie 2021-2022</p>
+      <p>
+        Copyright<span class="pale-pink bold"> &#169; </span>Jeannie 2021-2022
+      </p>
     </footer>
     <script src="./script.js"></script>
     <script src="./nav.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
