@@ -540,6 +540,7 @@ p.about-page_introduction {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 1.34rem;
 }
 .inputTitle {
   text-align: center;
