@@ -667,8 +667,15 @@ form button {
   text-align: center;
   color: var(--macaroni-cheese);
 }
-/* media queries */
-@media screen and (min-width: 680px) {
+/* == Media Queries == */
+@media screen and (min-width: 524px) {
+  .portfolio-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .videoWrapper {
     padding-bottom: 46.25%;
   }
@@ -696,17 +703,12 @@ form button {
     padding: 0.5rem 0.5rem 2rem;
   }
   .portfolio-section {
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    width: 70%;
+    width: 65%;
   }
 }
 @media screen and (min-width: 1024px) {
   .modal {
     width: 75%;
-  }
-  .modal-body {
-    padding: 2rem 8rem 0.5rem;
   }
   .modal-body p {
     margin: 0.2rem 0.2rem 1.5rem;
@@ -744,6 +746,9 @@ form button {
 @media screen and (min-width: 1450px) {
   .videoWrapper {
     padding-bottom: 36.25%;
+  }
+  .modal-body {
+    padding: 2rem 8rem 0.5rem;
   }
   .portfolio-section {
     width: 45%;

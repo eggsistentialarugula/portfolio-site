@@ -72,9 +72,9 @@ h1 {
   display: inline-block;
   cursor: pointer;
   color: var(--seashell);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: bold;
-  padding: 10px 8px;
+  padding: 9px 7px;
   text-decoration: none;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -249,7 +249,7 @@ nav {
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
-/* pull up and down */
+/* hover effect on nav links*/
 a.nav-link:before,
 a.nav-link:after {
   z-index: -1;
@@ -333,7 +333,6 @@ a.nav-link:hover:after {
 /********* end navbar *********/
 
 /* === Projects Section === */
-/* background color of work section */
 section#work.projects-section {
   background-color: var(--raisin-black);
 }
@@ -348,7 +347,7 @@ section#work.projects-section {
   --padding: 1rem;
   --gap: 3rem;
   --num-cols: 1;
-  --row-height: 250px;
+  --row-height: 350px;
   padding: 2rem var(--padding) 1rem;
   display: -ms-grid;
   display: grid;
@@ -357,13 +356,19 @@ section#work.projects-section {
   grid-auto-rows: var(--row-height);
   gap: var(--gap);
 }
+/* Media Queries for the Grid Layout */
 @media screen and (min-width: 488px) {
   .proj-grid {
-    --padding: 5rem;
-    --row-height: 300px;
+    --padding: 2rem;
+    --row-height: 350px;
   }
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 588px) {
+  .proj-grid {
+    --padding: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .proj-grid {
     --num-cols: 2;
     --padding: 2rem;
@@ -381,7 +386,7 @@ section#work.projects-section {
     --row-height: 350px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1385px) {
   .proj-grid {
     --num-cols: 3;
     --padding: 7rem;
@@ -396,7 +401,7 @@ section#work.projects-section {
   grid-row: span 2;
 }
 
-/* === hover title effect on project grid === */
+/*hover title effect on project grid*/
 .proj-item {
   position: relative;
   cursor: pointer;
@@ -457,7 +462,7 @@ section#work.projects-section {
   visibility: visible;
   opacity: 1;
 }
-/* background img of modal */
+/* Background Images of modals */
 .syfyAngular-bg {
   background: -webkit-linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("/assets/img/proj-imgs/syfyAngularSS.PNG");
@@ -488,11 +493,20 @@ section#work.projects-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/assets/img/proj-imgs/PokedexSS.PNG");
 }
+/* background image of contact form */
+.contact-bg {
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg");
+}
+/* properties of background images */
 .modal-bg-properties {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+/* modal layout */
 .modal-header {
   padding: 2rem;
 }
@@ -573,6 +587,21 @@ button.close-btn:hover {
   transform: rotateY(180deg);
   color: var(--vermillion);
 }
+/* == blue-green background when clicking modal ==*/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--blue-green-rgb-values), 0.5);
+}
+#overlay.active {
+  display: block;
+}
+/* End Projects Section & Contact Form BG Image */
+
 /* == Portfolio Section == */
 .portfolio-section {
   padding: 1rem;
@@ -583,7 +612,7 @@ p.about-page_introduction {
   font-size: 1.2rem;
   line-height: 25px;
   color: var(--seashell);
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 0.5rem;
 }
 .about-page {
   padding-top: 0.5rem;
@@ -613,13 +642,161 @@ p.about-page_introduction {
   color: var(--pale-pink);
   text-decoration: none;
 }
+/* == Contact Form == */
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 1.34rem;
+}
+.inputTitle {
+  text-align: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: var(--seashell);
+}
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 2vw 4vw;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.5);
+  letter-spacing: 1px;
+}
+.input {
+  box-sizing: border-box;
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.5);
+  outline: none;
+  background-color: rgba(var(--seashell-rgb-values), 0.25);
+  color: whitesmoke;
+  border-radius: 4px;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.input:focus {
+  border: 1px solid var(--blue-green);
+}
+.textArea {
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.6);
+  background-color: rgba(var(--pale-pink-rgb-values), 0.25);
+  color: whitesmoke;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.textArea:focus {
+  outline: none;
+  border-color: var(--macaroni-cheese);
+}
+::-webkit-input-placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1rem;
+}
+::-moz-placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1rem;
+}
+:-ms-input-placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1rem;
+}
+::placeholder {
+  color: whitesmoke;
+  font-weight: 600;
+  opacity: 1;
+  font-size: 1rem;
+}
+form button {
+  border: none;
+  margin: 20px auto 0;
+  width: 150px;
+  border-radius: 30px;
+}
+.contact-button {
+  border: 1px solid rgba(var(--vermillion-rgb-values), 0.6);
+  box-shadow: 0px 25px 14px -7px #00000069;
+  background-color: rgba(var(--seashell-rgb-values), 0.3);
+  text-shadow: 1px 1px 1px var(--raisin-black);
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: whitesmoke;
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 9px 7px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 4px;
+  letter-spacing: 1px;
+}
+.contact-button:hover,
+.contact-button:focus {
+  background-color: rgba(var(--seashell-rgb-values), 0.75);
+  color: var(--raisin-black);
+  text-shadow: 1px 1px 1px var(--seashell);
+  border-radius: 8px;
+}
+@supports (
+  (-webkit-backdrop-filter: blur(0.5rem)) or (backdrop-filter: blur(0.5rem))
+) {
+  .input {
+    -webkit-backdrop-filter: blur(0.6rem);
+    backdrop-filter: blur(0.6rem);
+  }
+  .textArea {
+    -webkit-backdrop-filter: blur(0.6rem);
+    backdrop-filter: blur(0.6rem);
+  }
+  .contact-button {
+    -webkit-backdrop-filter: blur(0.6rem);
+    backdrop-filter: blur(0.6rem);
+  }
+  .contact-button:hover,
+  .contact-button:focus {
+    -webkit-backdrop-filter: blur(0.6rem);
+    backdrop-filter: blur(0.6rem);
+  }
+}
+/* == End Contact Form == */
+
 /* == Footer == */
 .footer-section {
   text-align: center;
   color: var(--macaroni-cheese);
 }
-
-@media screen and (min-width: 680px) {
+/* == Media Queries == */
+@media screen and (min-width: 524px) {
+  .portfolio-section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .videoWrapper {
     padding-bottom: 46.25%;
   }
@@ -648,17 +825,12 @@ p.about-page_introduction {
     padding: 0.5rem 0.5rem 2rem;
   }
   .portfolio-section {
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    width: 70%;
+    width: 65%;
   }
 }
 @media screen and (min-width: 1024px) {
   .modal {
     width: 75%;
-  }
-  .modal-body {
-    padding: 2rem 8rem 0.5rem;
   }
   .modal-body p {
     margin: 0.2rem 0.2rem 1.5rem;
@@ -669,6 +841,14 @@ p.about-page_introduction {
   }
   .portfolio-section {
     width: 55%;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+  .contact-button {
+    font-size: 1rem;
+    padding: 10px 8px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -689,6 +869,9 @@ p.about-page_introduction {
   .videoWrapper {
     padding-bottom: 36.25%;
   }
+  .modal-body {
+    padding: 2rem 8rem 0.5rem;
+  }
   .portfolio-section {
     width: 45%;
   }
@@ -700,18 +883,6 @@ p.about-page_introduction {
   .portfolio-section {
     width: 40%;
   }
-}
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(var(--blue-green-rgb-values), 0.5);
-}
-#overlay.active {
-  display: block;
 }
 /* === Case Study === */
 .case-body {
