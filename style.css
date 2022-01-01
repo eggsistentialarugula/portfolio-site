@@ -67,9 +67,9 @@ h1 {
   display: inline-block;
   cursor: pointer;
   color: var(--seashell);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: bold;
-  padding: 10px 8px;
+  padding: 9px 7px;
   text-decoration: none;
   transition: 0.4s;
   border-radius: 4px;
@@ -212,7 +212,7 @@ nav {
   margin-left: 2.5rem;
   transition: 0.2s ease-in-out;
 }
-/* pull up and down */
+/* hover effect on nav links*/
 a.nav-link:before,
 a.nav-link:after {
   z-index: -1;
@@ -284,7 +284,6 @@ a.nav-link:hover:after {
 /********* end navbar *********/
 
 /* === Projects Section === */
-/* background color of work section */
 section#work.projects-section {
   background-color: var(--raisin-black);
 }
@@ -299,20 +298,26 @@ section#work.projects-section {
   --padding: 1rem;
   --gap: 3rem;
   --num-cols: 1;
-  --row-height: 250px;
+  --row-height: 350px;
   padding: 2rem var(--padding) 1rem;
   display: grid;
   grid-template-columns: repeat(var(--num-cols), 1fr);
   grid-auto-rows: var(--row-height);
   gap: var(--gap);
 }
+/* Media Queries for the Grid Layout */
 @media screen and (min-width: 488px) {
   .proj-grid {
-    --padding: 5rem;
-    --row-height: 300px;
+    --padding: 2rem;
+    --row-height: 350px;
   }
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 588px) {
+  .proj-grid {
+    --padding: 4rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .proj-grid {
     --num-cols: 2;
     --padding: 2rem;
@@ -330,7 +335,7 @@ section#work.projects-section {
     --row-height: 350px;
   }
 }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1385px) {
   .proj-grid {
     --num-cols: 3;
     --padding: 7rem;
@@ -343,7 +348,7 @@ section#work.projects-section {
   grid-row: span 2;
 }
 
-/* === hover title effect on project grid === */
+/*hover title effect on project grid*/
 .proj-item {
   position: relative;
   cursor: pointer;
@@ -394,7 +399,7 @@ section#work.projects-section {
   visibility: visible;
   opacity: 1;
 }
-/* background img of modal */
+/* Background Images of modals */
 .syfyAngular-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
     url("/assets/img/proj-imgs/syfyAngularSS.PNG");
@@ -415,15 +420,18 @@ section#work.projects-section {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/assets/img/proj-imgs/PokedexSS.PNG");
 }
+/* background image of contact form */
 .contact-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("/assets/img/pine-watt-3_Xwxya43hE-unsplash.jpg");
 }
+/* properties of background images */
 .modal-bg-properties {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+/* modal layout */
 .modal-header {
   padding: 2rem;
 }
@@ -495,6 +503,21 @@ button.close-btn:hover {
   transform: rotateY(180deg);
   color: var(--vermillion);
 }
+/* == blue-green background when clicking modal ==*/
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--blue-green-rgb-values), 0.5);
+}
+#overlay.active {
+  display: block;
+}
+/* End Projects Section & Contact Form BG Image */
+
 /* == Portfolio Section == */
 .portfolio-section {
   padding: 1rem;
@@ -535,12 +558,12 @@ p.about-page_introduction {
   color: var(--pale-pink);
   text-decoration: none;
 }
-/* Contact form */
+/* == Contact Form == */
 .form-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 1.34rem;
+  margin-bottom: 1.34rem;
 }
 .inputTitle {
   text-align: center;
@@ -559,23 +582,25 @@ form {
   letter-spacing: 1px;
 }
 .input {
+  box-sizing: border-box;
   border: 1px solid rgba(var(--vermillion-rgb-values), 0.5);
-  background-color: rgba(var(--seashell-rgb-values), 0.55);
+  outline: none;
+  background-color: rgba(var(--seashell-rgb-values), 0.25);
+  color: whitesmoke;
   border-radius: 4px;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
-  box-sizing: border-box;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  outline: none;
+  -webkit-transition: 0.5s;
 }
 .input:focus {
   border: 1px solid var(--blue-green);
 }
 .textArea {
   border: 1px solid rgba(var(--vermillion-rgb-values), 0.6);
-  background-color: rgba(var(--pale-pink-rgb-values), 0.74);
+  background-color: rgba(var(--pale-pink-rgb-values), 0.25);
+  color: whitesmoke;
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -586,7 +611,7 @@ form {
   border-color: var(--macaroni-cheese);
 }
 ::placeholder {
-  color: black;
+  color: whitesmoke;
   font-weight: 600;
   opacity: 1;
   font-size: 1rem;
@@ -602,13 +627,13 @@ form button {
   box-shadow: 0px 25px 14px -7px #00000069;
   background-color: rgba(var(--seashell-rgb-values), 0.3);
   text-shadow: 1px 1px 1px var(--raisin-black);
+  text-decoration: none;
   display: inline-block;
   cursor: pointer;
   color: whitesmoke;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: bold;
-  padding: 10px 8px;
-  text-decoration: none;
+  padding: 9px 7px;
   transition: 0.4s;
   border-radius: 4px;
   letter-spacing: 1px;
@@ -622,39 +647,27 @@ form button {
 }
 @supports (backdrop-filter: blur(0.5rem)) {
   .input {
-    background: rgba(var(--seashell-rgb-values), 0.3);
     backdrop-filter: blur(0.6rem);
   }
   .textArea {
-    background: rgba(var(--pale-pink-rgb-values), 0.35);
     backdrop-filter: blur(0.6rem);
-  }
-  ::placeholder {
-    color: whitesmoke;
-    font-weight: 600;
-    opacity: 1;
-    font-size: 0.9rem;
   }
   .contact-button {
-    background-color: rgba(var(--seashell-rgb-values), 0.35);
     backdrop-filter: blur(0.6rem);
-    text-shadow: 1px 1px 1px var(--raisin-black);
-    color: whitesmoke;
   }
   .contact-button:hover,
   .contact-button:focus {
-    background-color: rgba(var(--seashell-rgb-values), 0.75);
     backdrop-filter: blur(0.6rem);
-    color: var(--raisin-black);
   }
 }
+/* == End Contact Form == */
 
 /* == Footer == */
 .footer-section {
   text-align: center;
   color: var(--macaroni-cheese);
 }
-
+/* media queries */
 @media screen and (min-width: 680px) {
   .videoWrapper {
     padding-bottom: 46.25%;
@@ -705,6 +718,14 @@ form button {
   .portfolio-section {
     width: 55%;
   }
+  .button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
+  .contact-button {
+    font-size: 1rem;
+    padding: 10px 8px;
+  }
 }
 @media screen and (min-width: 1280px) {
   .videoWrapper {
@@ -735,18 +756,6 @@ form button {
   .portfolio-section {
     width: 40%;
   }
-}
-#overlay {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(var(--blue-green-rgb-values), 0.5);
-}
-#overlay.active {
-  display: block;
 }
 /* === Case Study === */
 .case-body {

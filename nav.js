@@ -1,4 +1,4 @@
-// burger
+// navigation burger
 const primaryNav = document.querySelector("#navbar");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const navLink = document.querySelectorAll(".nav-link");

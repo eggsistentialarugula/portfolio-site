@@ -20,6 +20,7 @@
     >
       <span class="sr-only">Menu</span>
     </button>
+    <!-- Begin Navbar -->
     <nav id="navbar" data-visible="false" tabindex="0">
       <ul class="nav-menu" role="menubar" aria-haspopup="true">
         <li class="nav-item" role="menuitem" aria-label="Portfolio">
@@ -36,9 +37,15 @@
         </li>
       </ul>
     </nav>
+    <!-- End Navbar -->
+
+    <!-- Greeting Container -->
     <div class="top-container">
       <h1 class="hideHello">Hi, I'm Jeannie</h1>
     </div>
+    <!-- End greeting container -->
+
+    <!-- Project Modals Section -->
     <section class="projects-section" id="portfolio">
       <h1 class="proj-title">Projects</h1>
       <div class="proj-grid">
@@ -66,7 +73,7 @@
             <div class="modal-title">Syfy - Angular Client</div>
             <img
               src="./assets/img/proj-imgs/syfyAngularSS.PNG"
-              alt="syfyAngular screenshot"
+              alt="syfyAngular App screenshot"
             />
             <div class="modal-body">
               <p>
@@ -76,8 +83,6 @@
                 Material and SCSS. I used Compodoc to generate documentation of
                 the JSDoc comments on my app.
               </p>
-              <p></p>
-              <p></p>
               <p>
                 For the server-side, I created a REST API and architected
                 database using Express.js and MongoDB. I created two different
@@ -150,7 +155,10 @@
               </button>
             </div>
             <div class="modal-title">Syfy - React Client</div>
-            <img src="./assets/img/proj-imgs/syfyReactSS.PNG" alt="" />
+            <img
+              src="./assets/img/proj-imgs/syfyReactSS.PNG"
+              alt="Syfy React App Screenshot"
+            />
             <div class="modal-body">
               <p>
                 SyfyMovies is web app developed using the MERN stack. It
@@ -209,7 +217,10 @@
               </button>
             </div>
             <div class="modal-title">Syfy Backend (REST API)</div>
-            <img src="./assets/img/proj-imgs/movieAPISS.PNG" alt="" />
+            <img
+              src="./assets/img/proj-imgs/movieAPISS.PNG"
+              alt="Syfy API Screenshot"
+            />
             <div class="modal-body">
               <p>
                 This is the server-side component of Syfy. It interacts with a
@@ -267,7 +278,10 @@
               </button>
             </div>
             <div class="modal-title">Meet App</div>
-            <img src="./assets/img/proj-imgs/meetSS.PNG" alt="" />
+            <img
+              src="./assets/img/proj-imgs/meetSS.PNG"
+              alt="Meet App Screenshot"
+            />
             <div class="modal-body">
               <p>
                 This app displays events in different cities that are fetched
@@ -436,6 +450,9 @@
         </div>
       </div>
     </section>
+    <!-- End Project Modals Section -->
+
+    <!-- Portfolio Modal Section -->
     <section class="portfolio-section">
       <!-- === portfolio === -->
       <div class="proj-item" data-target="#portfolioModal">
@@ -495,7 +512,10 @@
         </div>
       </div>
     </section>
+    <!-- End Portfolio Modal Section -->
+
     <div id="overlay"></div>
+
     <!-- About Section -->
     <section class="about-page" id="about">
       <h1 class="about-title">About me</h1>
@@ -510,55 +530,47 @@
         the nearby park.
       </p>
     </section>
+    <!-- End About Section -->
 
     <!-- Contact form -->
     <h1>Get in touch</h1>
     <div class="form-container">
-      <form
-        class="contact-bg modal-bg-properties"
-        onsubmit="sendEmail(); reset(); return false;"
-      >
-        <span class="inputTitle">Name</span
-        ><input
+      <form class="contact-bg modal-bg-properties" id="myForm">
+        <label class="inputTitle" for="from_name">From</label>
+        <input
           type="text"
-          id="name"
+          id="from_name"
           class="input"
           placeholder="Your Name"
           required
         />
-        <span class="inputTitle">Email</span
-        ><input
+        <label class="inputTitle" for="email_from">Email</label>
+        <input
           type="email"
-          id="email"
+          id="email_from"
           class="input"
           placeholder="Email"
           required
         />
-        <span class="inputTitle">Phone</span
-        ><input
-          type="text"
-          id="phone"
-          class="input"
-          placeholder="Phone no."
-          required
-        />
+        <label class="inputTitle" for="message">Message</label>
         <textarea
           class="textArea"
           id="message"
           rows="8"
           placeholder="Write your message here :)"
         ></textarea>
-        <button class="contact-button" type="submit">Send</button>
+        <button class="contact-button" type="button">Send</button>
       </form>
     </div>
+    <!-- End Contact Form -->
 
     <!-- CONTACT INFO Section -->
     <section class="contact-section" id="contact">
       <h1 class="contact-title">Contact Info</h1>
       <div class="page-contact_info">
-        Phone: <a href="tel:+112345678900">+1 562 652 0530</a><br />
-        Email: <a href="madeupemail@gmail.com">jtworking123@gmail.com</a><br />
-        Github accounts:
+        Phone <a href="tel:+112345678900">+1 562 652 0530</a><br />
+        Email <a href="madeupemail@gmail.com">jtworking123@gmail.com</a><br />
+        Github
         <a target="_blank" href="https://github.com/eggsistentialarugula"
           >eggsistentialarugula</a
         >
@@ -566,6 +578,7 @@
         <a target="_blank" href="https://github.com/tadpoleann">tadpoleann</a>
       </div>
     </section>
+    <!-- End Contact Info Section -->
 
     <!-- Footer -->
     <footer class="footer-section">
@@ -573,8 +586,18 @@
         Copyright<span class="pale-pink bold"> &#169; </span>Jeannie 2021-2022
       </p>
     </footer>
+    <!-- End Footer -->
+
+    <!-- Scripts -->
+    <!-- Email JS -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- Main JS file for email -->
+    <script src="./email.js"></script>
+    <!-- General JS -->
     <script src="./script.js"></script>
     <script src="./nav.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
