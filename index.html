@@ -535,10 +535,17 @@
     <!-- Contact form -->
     <h1>Get in touch</h1>
     <div class="form-container">
-      <form class="contact-bg modal-bg-properties" id="myForm">
+      <form
+        class="contact-bg modal-bg-properties"
+        id="myForm"
+        name="contact"
+        method="POST"
+        data-netlify="true"
+      >
         <label class="inputTitle" for="from_name">From</label>
         <input
           type="text"
+          name="name"
           id="from_name"
           class="input"
           placeholder="Your Name"
@@ -547,6 +554,7 @@
         <label class="inputTitle" for="email_from">Email</label>
         <input
           type="email"
+          name="email"
           id="email_from"
           class="input"
           placeholder="Email"
@@ -554,12 +562,13 @@
         />
         <label class="inputTitle" for="message">Message</label>
         <textarea
+          name="message"
           class="textArea"
           id="message"
           rows="8"
           placeholder="Write your message here :)"
         ></textarea>
-        <button class="contact-button" type="button">Send</button>
+        <button class="contact-button" type="submit">Send</button>
       </form>
     </div>
     <!-- End Contact Form -->
@@ -595,7 +604,7 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
     ></script>
     <!-- Main JS file for email -->
-    <script src="./email.js"></script>
+    <!-- <script src="./email.js"></script> -->
     <!-- General JS -->
     <script src="./script.js"></script>
     <script src="./nav.js"></script>
