@@ -1,3 +1,5 @@
 My portfolio website that shows the projects I've done in CareerFoundry.
 
-Created with CSS and vanilla JS. No libraries or frameworks were used.
+Built with - HTML, CSS, and Vanilla JavaScript
+
+For practice reasons, I chose to refrain from building it using libraries/frameworks, so every line of code here is hand-coded from scratch.
