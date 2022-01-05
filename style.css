@@ -55,6 +55,15 @@ h1 {
 .pale-pink {
   color: var(--pale-pink);
 }
+.raisin-black {
+  color: var(--raisan-black);
+}
+.macaroni-cheese {
+  color: var(--macaroni-cheese);
+}
+.seashell {
+  color: var(--seashell);
+}
 .button {
   box-shadow: 0px 25px 14px -7px #00000069;
   background: linear-gradient(
@@ -558,12 +567,20 @@ p.about-page_introduction {
   color: var(--pale-pink);
   text-decoration: none;
 }
+.contactForm-title {
+  background-color: rgba(var(--pale-pink-rgb-values), 0.15);
+  padding-bottom: 1.34rem;
+  padding-top: 1.34rem;
+  margin: 0;
+}
 /* == Contact Form == */
 .form-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.34rem;
+  padding-bottom: 1.34rem;
+  padding-top: 1.34rem;
+  background-color: rgba(var(--pale-pink-rgb-values), 0.15);
 }
 .inputTitle {
   text-align: center;
@@ -665,7 +682,7 @@ form button {
 /* == Footer == */
 .footer-section {
   text-align: center;
-  color: var(--macaroni-cheese);
+  color: var(--blue-green);
 }
 /* == Media Queries == */
 @media screen and (min-width: 524px) {
@@ -761,6 +778,27 @@ form button {
   .portfolio-section {
     width: 40%;
   }
+}
+/* logos */
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.logo-link {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+.logo-icon {
+  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem;
+}
+.logo-icon:hover {
+  transform: scale(1.5);
 }
 /* === Case Study === */
 .case-body {

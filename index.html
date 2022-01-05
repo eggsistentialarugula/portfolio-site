@@ -9,8 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" type="text/css" href="./style.css" /> -->
-    <link rel="stylesheet" href="./productionstyle.css" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <!-- <link rel="stylesheet" href="./productionstyle.css" /> -->
   </head>
   <body>
     <button
@@ -84,11 +84,9 @@
                 the JSDoc comments on my app.
               </p>
               <p>
-                For the server-side, I created a REST API and architected
-                database using Express.js and MongoDB. I created two different
-                client-sides with React and Angular.
+                It uses the existing server-side REST API that I created using
+                the Node.js framework Express and MongoDB.
               </p>
-              <p>This is the Angular client-side.</p>
               <h1>Features</h1>
               <ul class="featureList">
                 <li>
@@ -171,7 +169,6 @@
                 It uses the existing server-side REST API that I created using
                 the Node.js framework Express and MongoDB.
               </p>
-              <p>This is the React client-side.</p>
               <p>
                 Built with React, React-Redux, React Bootstrap, Netlify for
                 hosting
@@ -533,7 +530,7 @@
     <!-- End About Section -->
 
     <!-- Contact form -->
-    <h1>Get in touch</h1>
+    <h1 class="macaroni-cheese contactForm-title">Get in touch</h1>
     <div class="form-container">
       <form
         class="contact-bg modal-bg-properties"
@@ -585,6 +582,31 @@
         >
         <span class="vermillion bold">&#9671; </span>
         <a target="_blank" href="https://github.com/tadpoleann">tadpoleann</a>
+        <!-- social logos -->
+        <div class="social-media">
+          <a
+            href="https://medium.com/@jtworking123"
+            class="logo-link"
+            target="_blank"
+          >
+            <img
+              src="./icons/medium-seeklogo.com.svg"
+              class="logo-icon"
+              alt="Medium Logo"
+            />
+          </a>
+          <a
+            href="https://twitter.com/annie_tadpole"
+            class="logo-link"
+            target="_blank"
+          >
+            <img
+              src="./icons/twitter-seeklogo.com.svg"
+              class="logo-icon"
+              alt="Twitter Logo"
+            />
+          </a>
+        </div>
       </div>
     </section>
     <!-- End Contact Info Section -->
@@ -598,13 +620,6 @@
     <!-- End Footer -->
 
     <!-- Scripts -->
-    <!-- Email JS -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-    ></script>
-    <!-- Main JS file for email -->
-    <!-- <script src="./email.js"></script> -->
     <!-- General JS -->
     <script src="./script.js"></script>
     <script src="./nav.js"></script>
