@@ -554,7 +554,8 @@ p.about-page_introduction {
   background-color: rgba(var(--blue-green-rgb-values), 0.2);
   color: var(--seashell);
   text-align: center;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
 }
 .contact-title {
   color: var(--macaroni-cheese);
@@ -579,7 +580,7 @@ p.about-page_introduction {
   align-items: center;
   justify-content: center;
   padding-bottom: 1.34rem;
-  padding-top: 1.34rem;
+  padding-top: 0;
   background-color: rgba(var(--pale-pink-rgb-values), 0.15);
 }
 .inputTitle {
