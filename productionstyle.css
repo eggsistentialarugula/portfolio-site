@@ -55,6 +55,15 @@ h1 {
 .pale-pink {
   color: var(--pale-pink);
 }
+.raisin-black {
+  color: var(--raisan-black);
+}
+.macaroni-cheese {
+  color: var(--macaroni-cheese);
+}
+.seashell {
+  color: var(--seashell);
+}
 .button {
   box-shadow: 0px 25px 14px -7px #00000069;
   background: -webkit-linear-gradient(
@@ -103,11 +112,6 @@ h1 {
 }
 ::-webkit-scrollbar-track {
   background: rgb(23, 190, 187);
-  background: -webkit-linear-gradient(
-    bottom,
-    rgba(23, 190, 187, 1) 0%,
-    rgba(205, 83, 52, 1) 100%
-  );
   background: linear-gradient(
     0deg,
     rgba(23, 190, 187, 1) 0%,
@@ -629,7 +633,8 @@ p.about-page_introduction {
   background-color: rgba(var(--blue-green-rgb-values), 0.2);
   color: var(--seashell);
   text-align: center;
-  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
 }
 .contact-title {
   color: var(--macaroni-cheese);
@@ -642,6 +647,12 @@ p.about-page_introduction {
   color: var(--pale-pink);
   text-decoration: none;
 }
+.contactForm-title {
+  background-color: rgba(var(--pale-pink-rgb-values), 0.15);
+  padding-bottom: 1.34rem;
+  padding-top: 1.34rem;
+  margin: 0;
+}
 /* == Contact Form == */
 .form-container {
   display: -webkit-box;
@@ -653,7 +664,9 @@ p.about-page_introduction {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-bottom: 1.34rem;
+  padding-bottom: 1.34rem;
+  padding-top: 0;
+  background-color: rgba(var(--pale-pink-rgb-values), 0.15);
 }
 .inputTitle {
   text-align: center;
@@ -786,7 +799,7 @@ form button {
 /* == Footer == */
 .footer-section {
   text-align: center;
-  color: var(--macaroni-cheese);
+  color: var(--blue-green);
 }
 /* == Media Queries == */
 @media screen and (min-width: 524px) {
@@ -883,6 +896,41 @@ form button {
   .portfolio-section {
     width: 40%;
   }
+}
+/* logos */
+.social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.logo-link {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+.logo-icon {
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  padding: 0.5rem;
+}
+.logo-icon:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5);
 }
 /* === Case Study === */
 .case-body {
